@@ -2,6 +2,10 @@
 
 This repository serves as a basic demo of a Scala Play application.
 
+In IntelliJ IDEA, the Run/Debug Configuration settings should be as follows:
+
+![image1](./screenshots/image1.png)
+
 ### The Play application layout
 
 The following structure demonstration is from [this website](https://www.playframework.com/documentation/2.8.x/Anatomy).
