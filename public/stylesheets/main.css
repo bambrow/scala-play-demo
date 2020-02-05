@@ -1,0 +1,38 @@
+body {
+    background-color: lightgray;
+}
+
+h2 {
+    color:darkred;
+    font-family: Monaco;
+    font-size: 150%;
+    text-align: center;
+}
+
+form {
+    text-align: center;
+}
+
+input[type=text], input[type=password] {
+    border: 2px solid darkred;
+    border-radius: 4px;
+}
+
+button[type=submit] {
+    background-color: lavender;
+    border: 2px black;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+    table-layout: auto;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th, td {
+    border: 1px solid black;
+    text-align: center;
+}

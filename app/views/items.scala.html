@@ -1,0 +1,42 @@
+@(items: Seq[SingleItem])(implicit request: RequestHeader)
+
+@import helper._
+
+@main("Item List") {
+
+    <section id="top">
+        <div class="wrapper">
+            <form action="/items" method="POST">
+                @CSRF.formField
+                <input name="item" type="text" placeholder="Item" /> <br/>
+                <button type="submit">Add</button>
+            </form>
+            <hr>
+            @if(items.nonEmpty) {
+                <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>Item</th>
+                        <th>Time</th>
+                        <th>Delete</th>
+                    </tr>
+                    @for(item <- items.zipWithIndex) {
+                        <tr>
+                            <td>@{item._2}</td>
+                            <td>@{item._1.item}</td>
+                            <td>@{item._1.date}</td>
+                            <td>
+                                <form action="/items/@{item._2}/delete" method="POST">
+                                    @CSRF.formField
+                                    <button type="submit">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </table>
+            }
+
+        </div>
+    </section>
+
+}
